@@ -1,10 +1,10 @@
 # PagoDiario API
 
-Code Challenge para PagoDiario con el stack MEAN.
+Code Challenge para PagoDiario con el stack MEAN. El código tiene comentarios de las partes que componen la aplicación y del por que se tomaron algunas decisiones.
 
 ## Dependencias
 
-Se debe de tener un servidor de mongoDB corriendo localmente en el puerto por defecto: `27017`
+Se debe de tener un servidor de mongoDB corriendo localmente en el puerto por defecto: `27017`. O bien, modificar el archivo de configuracion `src/config/dev.js` y apuntarlo a `mongodb+srv://pagodiario:p4g0d14r10@cluster0.vmzhv.mongodb.net/pagodiario-prod` que es la instancia de mongoDB en Mongo Atlas.
 
 Para descargar las dependencias:
 
@@ -27,7 +27,7 @@ Para ejecutar los unit test, se ejecutan los siguientes comandos:
 
 #### Modelos
 
-Tests relacionados a los modelos de las entidades (User) definidos en los requerimientos:
+Prueba que la entidad tenga el modelo definido en el documento de requerimientos:
 
 ```
 npm test:models
@@ -35,15 +35,15 @@ npm test:models
 
 #### Controladores
 
-Prueba que cada entidad tenga definidas cada operación CRUD:
+Prueba que la entidad tenga los métodos definidos para cada operación CRUD:
 
 ```
-npm test:routes
+npm test:controllers
 ```
 
 #### Rutas
 
-Prueba que cada entidad tenga definidos los endpoint/rutas para cada operación CRUD.:
+Prueba que la entidad tenga definidos los endpoint/rutas para cada operación CRUD.:
 
 ```
 npm test:routes
@@ -51,8 +51,12 @@ npm test:routes
 
 #### API
 
-Prueba las api haciendo request HTTP a cada endpoint
+Prueba la API haciendo requests HTTP a cada endpoint
 
 ```
 npm test:api
 ```
+
+## Desplegue
+
+Se desplegó una copia de la aplicación en la plataforma heroku: `https://pagodiario-api.herokuapp.com/api/v1/user`
