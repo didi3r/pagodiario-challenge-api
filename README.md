@@ -1,4 +1,4 @@
-# PagoDiario API
+# PagoDiario API (ExpressJS)
 
 Code Challenge para PagoDiario con el stack MEAN. El código tiene comentarios de las partes que componen la aplicación y del por que se tomaron algunas decisiones.
 
